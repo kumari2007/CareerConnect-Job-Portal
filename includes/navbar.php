@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <div class="navbar">
 
     <div class="logo">
@@ -6,10 +10,30 @@
     </div>
 
     <div class="nav-links">
+
         <a href="index.php">Home</a>
+
         <a href="jobs.php">Jobs</a>
-        <a href="login.php">Login</a>
-        <a href="register.php">Register</a>
+
+        <?php if(isset($_SESSION['user_id'])){ ?>
+
+            <a href="dashboard.php">
+
+                Hi,
+                <?php echo $_SESSION['user_name']; ?> 👋
+
+            </a>
+
+            <a href="logout.php">Logout</a>
+
+        <?php } else { ?>
+
+            <a href="login.php">Login</a>
+
+            <a href="register.php">Register</a>
+
+        <?php } ?>
+
     </div>
 
 </div>

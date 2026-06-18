@@ -31,33 +31,88 @@ if(!isset($_SESSION['user_id'])){
 
 <div class="auth-container">
 
-    <div class="auth-form">
+<div class="auth-form">
 
-        <h2>
-            Welcome,
-            <?php echo $_SESSION['user_name']; ?>
-        </h2>
+    <h2>
+        Hi,
+        <?php echo $_SESSION['user_name']; ?> 👋
+    </h2>
 
-        <p class="bottom-text">
-            Login Successful 🎉
-        </p>
+    <p class="bottom-text">
 
-        <br>
+        Welcome back to CareerConnect.
+        Your dream job journey starts here ✨
 
-        <div style="text-align:center; margin-top:20px;">
+    </p>
 
-    <a href="logout.php"
-    class="btn">
+   <div class="quote-box">
 
-    Logout
+    <p id="quote">
+        “Success doesn’t come from what you do occasionally.
+        It comes from what you do consistently.”
+    </p>
 
-    </a>
+</div>
+
+    <div style="text-align:center; margin-top:25px;">
+
+        <a href="logout.php"
+        class="btn">
+
+        Logout
+
+        </a>
+
+    </div>
 
 </div>
 
     </div>
 
 </div>
+
+<script>
+
+const quotes = [
+
+"Success doesn’t come from what you do occasionally. It comes from what you do consistently.",
+
+"Dream big. Start small. Act now.",
+
+"Your future is created by what you do today, not tomorrow.",
+
+"Every expert was once a beginner.",
+
+"Opportunities don’t happen. You create them."
+
+];
+
+let index = 0;
+
+const quote =
+document.getElementById("quote");
+
+setInterval(() => {
+
+    index++;
+
+    if(index >= quotes.length){
+        index = 0;
+    }
+
+    quote.style.opacity = 0;
+
+    setTimeout(() => {
+
+        quote.innerText = quotes[index];
+
+        quote.style.opacity = 1;
+
+    }, 500);
+
+}, 5000);
+
+</script>
 
 </body>
 </html>
