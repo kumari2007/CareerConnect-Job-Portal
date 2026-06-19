@@ -593,22 +593,14 @@ body{
 textarea{
     width:100%;
     height:140px;
-
     padding:15px;
-
     border:none;
     outline:none;
-
     border-radius:12px;
-
     background:rgba(255,255,255,0.1);
-
     color:white;
-
     font-size:16px;
-
     resize:none;
-
     margin-top:10px;
 }
 
