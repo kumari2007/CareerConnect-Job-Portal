@@ -28,6 +28,7 @@ if(isset($_POST['login'])){
             $_SESSION['user_name'] = $user['fullname'];
 
             $_SESSION['user_email'] = $user['email'];
+            $_SESSION['role'] = $user['role'];
 
             header("Location: dashboard.php");
 
