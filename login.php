@@ -13,7 +13,9 @@ if(isset($_POST['login'])){
     $password = $_POST['password'];
 
     $checkUser = mysqli_query($conn,
-    "SELECT * FROM users WHERE email='$email'");
+        "SELECT * FROM users
+        WHERE email='$email'
+        AND role='jobseeker'");
 
     if(mysqli_num_rows($checkUser) > 0){
 
@@ -69,7 +71,7 @@ if(isset($_POST['login'])){
 
     <form class="auth-form" method="POST">
 
-        <h2>Welcome Back</h2>
+        <h2>User Login</h2>
 
         <?php
         if($message != ""){

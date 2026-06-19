@@ -9,6 +9,7 @@ if(isset($_POST['register'])){
     $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = $_POST['password'];
+    $role = $_POST['role'];
 
     // Hash Password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -23,14 +24,25 @@ if(isset($_POST['register'])){
     }else{
 
         $insert = mysqli_query($conn,
-        "INSERT INTO users(fullname,email,password)
-        VALUES('$fullname','$email','$hashedPassword')");
+
+        "INSERT INTO users(fullname,email,password,role)
+        VALUES('$fullname','$email','$hashedPassword','$role')");
 
         if($insert){
-            $message = "Registration Successful!";
-        }else{
-            $message = "Something went wrong!";
-        }
+
+    if($role == "admin"){
+
+        header("Location: admin-login.php");
+
+    }else{
+
+        header("Location: login.php");
+    }
+
+}else{
+
+    $message = "Something went wrong!";
+}
     }
 }
 
@@ -83,25 +95,46 @@ if(isset($_POST['register'])){
             required>
         </div>
 
-    <div class="input-box">
+        <div class="input-box password-box">
 
-    <i class="fa-solid fa-lock"></i>
+             <i class="fa-solid fa-lock"></i>
 
-    <input type="password"
-    name="password"
-    id="password"
-    placeholder="Password"
-    required>
+            <input type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required>
 
-    <span class="toggle-password"
-    onclick="togglePassword()">
+            <span class="toggle-password"
+            onclick="togglePassword()">
 
-        <i class="fa-solid fa-eye"
-        id="eyeIcon"></i>
+            <i class="fa-solid fa-eye"
+            id="eyeIcon"></i>
 
-    </span>
+            </span>
 
-</div>
+        </div>
+        <div class="input-box role-box">
+
+            <i class="fa-solid fa-user-tag"></i>
+
+            <select name="role" required>
+
+                <option value="">
+                    Select Role
+                </option>
+
+                <option value="jobseeker">
+                    User
+                </option>
+
+                <option value="admin">
+                    Admin
+                </option>
+
+            </select>
+
+         </div>
         <div id="strength-text"></div>
         <button type="submit"
         name="register"

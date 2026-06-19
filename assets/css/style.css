@@ -125,7 +125,6 @@ body{
     align-items:center;
     justify-content:center;
     gap:8px;
-    min-width:220px;
     padding:15px 30px;
     border-radius:50px;
     background:linear-gradient(45deg,#38bdf8,#0ea5e9);
@@ -134,7 +133,9 @@ body{
     font-weight:600;
     transition:0.3s;
 }
-
+.hero-buttons .btn{
+    min-width:220px;
+}
 .btn:hover{
     transform:translateY(-5px) scale(1.05);
     box-shadow:0 0 30px rgba(56,189,248,0.8);
@@ -236,6 +237,7 @@ body{
     border-radius:20px;
     box-shadow:0 0 30px rgba(0,0,0,0.4);
     animation:fadeUp 1s ease;
+    
 }
 
 .auth-form h2{
@@ -278,26 +280,26 @@ body{
 
 .toggle-password{
     position:absolute;
-    right:15px;
+    right:18px;
     top:50%;
     transform:translateY(-50%);
     color:#38bdf8;
     cursor:pointer;
-    font-size:16px;
-    transition:0.3s ease;
+    font-size:18px;
 }
 
 .auth-btn{
     width:100%;
-    height:55px;
+    padding:15px;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     background:linear-gradient(45deg,#38bdf8,#0ea5e9);
     color:white;
     font-size:18px;
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
+    margin-top:10px;
 }
 
 .auth-btn:hover{
@@ -516,16 +518,16 @@ body{
 }
 /* FORM ELEMENTS */
 
-.input-box select,
-.input-box textarea{
+.input-box select{
     width:100%;
-    padding:15px;
+    padding:15px 50px 15px 15px;
     border:none;
     outline:none;
     border-radius:10px;
     background:rgba(255,255,255,0.1);
     color:white;
     font-size:16px;
+    appearance:none;
 }
 
 .input-box textarea{
@@ -535,4 +537,54 @@ body{
 
 .input-box select option{
     color:black;
+}
+/* PASSWORD BOX */
+
+.password-box{
+    position:relative;
+}
+
+.password-box input{
+    width:100%;
+    padding:15px 50px;
+}
+
+.toggle-password{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#38bdf8;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* ROLE BOX */
+
+.role-box{
+    position:relative;
+}
+
+.role-box select{
+    width:100%;
+    padding:15px 50px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:16px;
+    appearance:none;
+}
+
+.role-box select option{
+    color:black;
+}
+
+.role-box i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#38bdf8;
 }
