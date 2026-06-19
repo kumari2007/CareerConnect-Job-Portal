@@ -29,35 +29,32 @@ if(!isset($_SESSION['user_id'])){
 
 <?php include 'includes/navbar.php'; ?>
 
-<div class="auth-container">
+<div class="dashboard-container">
 
-<div class="auth-form">
+    <div class="dashboard-card">
 
-    <h2>
-        Hi,
-        <?php echo $_SESSION['user_name']; ?> 👋
-    </h2>
+        <h1>
+            Hi,
+            <?php echo $_SESSION['user_name']; ?> 👋
+        </h1>
 
-    <p class="bottom-text">
+        <p class="dashboard-text">
 
-        Welcome back to CareerConnect.
-        Your dream job journey starts here ✨
+            Your dream job journey starts here ✨
 
-    </p>
+        </p>
 
-   <div class="quote-box">
+        <div class="quote-box">
 
-    <p id="quote">
-        “Success doesn’t come from what you do occasionally.
-        It comes from what you do consistently.”
-    </p>
+            <p id="quote">
+                “Success doesn’t come from what you do occasionally.
+                It comes from what you do consistently.”
+            </p>
 
-</div>
-
-    <div style="text-align:center; margin-top:25px;">
+        </div>
 
         <a href="logout.php"
-        class="btn">
+        class="btn dashboard-btn">
 
         Logout
 
@@ -67,9 +64,6 @@ if(!isset($_SESSION['user_id'])){
 
 </div>
 
-    </div>
-
-</div>
 
 <script>
 

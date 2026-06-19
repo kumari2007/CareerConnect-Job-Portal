@@ -28,10 +28,34 @@
         and grow your professional career with CareerConnect.
     </p>
 
-    <a href="jobs.php" class="btn">
+ 
+    
+    <div class="hero-buttons">
+   <a href="jobs.php" class="btn">
         <i class="fa-solid fa-briefcase"></i>
         Explore Jobs
     </a>
+    <a href="login.php"
+    class="btn">
+
+    <i class="fa-solid fa-user"></i>
+
+    Login as User
+
+    </a>
+    
+
+    <a href="admin-login.php"
+    class="btn">
+
+    <i class="fa-solid fa-user-shield"></i>
+
+    Login as Admin
+
+    </a>
+    
+
+    </div>
 
 </section>
 

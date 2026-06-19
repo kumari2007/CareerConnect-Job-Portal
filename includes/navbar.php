@@ -16,6 +16,9 @@ session_start();
         <a href="jobs.php">Jobs</a>
 
         <?php if(isset($_SESSION['user_id'])){ ?>
+        <a href="my-applications.php">
+My Applications
+</a>
 
             <a href="dashboard.php">
 

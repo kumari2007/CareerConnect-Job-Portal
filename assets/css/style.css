@@ -82,6 +82,14 @@ body{
     padding:20px;
     animation:zoomBg 10s infinite alternate;
 }
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
 
 @keyframes zoomBg{
     from{
@@ -113,17 +121,18 @@ body{
 }
 
 .btn{
-    padding:15px 35px;
-    background:linear-gradient(45deg,#38bdf8,#0ea5e9);
-    border:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-width:220px;
+    padding:15px 30px;
     border-radius:50px;
+    background:linear-gradient(45deg,#38bdf8,#0ea5e9);
     color:white;
     text-decoration:none;
-    font-size:18px;
     font-weight:600;
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(56,189,248,0.4);
-    animation:fadeUp 1.4s ease;
+    transition:0.3s;
 }
 
 .btn:hover{
@@ -338,4 +347,192 @@ body{
     line-height:1.8;
     font-weight:500;
     transition:0.5s ease;
+}
+/* JOBS PAGE */
+
+.jobs-container{
+    padding:120px 8% 50px;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(15,23,42,0.92),
+    rgba(15,23,42,0.95)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.job-heading{
+    color:white;
+    text-align:center;
+    margin-bottom:50px;
+    font-size:45px;
+}
+
+.jobs-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.job-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+    color:white;
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(56,189,248,0.25);
+}
+
+.job-card h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.job-card p{
+    margin-bottom:12px;
+    color:#e2e8f0;
+}
+
+.job-description{
+    margin:20px 0;
+    color:#cbd5e1;
+    line-height:1.7;
+}
+/* DASHBOARD */
+
+.dashboard-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:100px;
+
+    background:
+    linear-gradient(rgba(15,23,42,0.88),
+    rgba(15,23,42,0.92)),
+    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1920');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.dashboard-card{
+    width:650px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,0.3);
+    animation:fadeUp 1s ease;
+}
+
+.dashboard-card h1{
+    color:white;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.dashboard-text{
+    color:#cbd5e1;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.dashboard-btn{
+    display:inline-block;
+    margin-top:30px;
+}
+/* APPLY JOB */
+
+.job-preview{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.job-preview h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.job-preview p{
+    color:#e2e8f0;
+}
+
+.input-box input[type="file"]{
+    padding:15px;
+    color:white;
+}
+/* ADMIN PANEL */
+
+.admin-stats{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.stat-card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:220px;
+    text-align:center;
+}
+
+.stat-card h2{
+    color:#38bdf8;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#e2e8f0;
+}
+
+.admin-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+/* FORM ELEMENTS */
+
+.input-box select,
+.input-box textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:16px;
+}
+
+.input-box textarea{
+    min-height:140px;
+    resize:none;
+}
+
+.input-box select option{
+    color:black;
 }
